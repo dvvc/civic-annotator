@@ -8,7 +8,22 @@
     z-index: 9999;
 }
 
-.cann-highlight {
 
+#cann-submit-dialog {
+
+    position: absolute;
+    top: 100px;
+    width: 400px;
+    left: 50%;
+    margin-left: -200px;
+    z-index: 9999;
+    padding: 20px;
+    border: solid thin black;
+    background-color: white;
+    display: none;
+
+}
+
+.cann-highlight {
     border: solid red 3px;
 }

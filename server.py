@@ -61,11 +61,17 @@ def index():
 @app.route('/hello/',  methods=['POST','OPTIONS'])
 @crossdomain(origin='*')
 def hello():
+    db = client['cnty-annt-db']
+    fodic = {}
     formdict = request.form
+    insertstring = ""
     for key, value in formdict.iteritems():
-    	print key
-	print value
-    return formdict
+    	insertstring += key+":"+value+","
+        fodic[key]=value
+    querystring = insertstring[:len(insertstring)-1]
+    print querystring
+    result = db.annotation.insert_one(fodic)
+    return "tonto"
 
 @app.route('/post/<int:post_id>')
 def show_post(post_id):

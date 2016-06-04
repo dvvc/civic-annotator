@@ -1,4 +1,14 @@
-#foobar {
+#cann-menu {
+    position: absolute;
+    left: 50%;
+    top: 0px;
+    width: 600px;
+    background-color: red;
+    margin-left: -300px;
+    z-index: 9999;
+}
 
-    background-color: green;
+.cann-highlight {
+
+    border: solid red 3px;
 }

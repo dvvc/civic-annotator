@@ -3,11 +3,14 @@
     left: 50%;
     top: 0px;
     width: 600px;
-    background-color: red;
+    background-color: white;
     margin-left: -300px;
     z-index: 9999;
 }
 
+.cann-separator {
+    width: 10px;
+}
 
 #cann-submit-dialog {
 

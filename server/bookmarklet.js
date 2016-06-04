@@ -94,6 +94,8 @@
     var submitBtn = $("<a href='javascript:cannSubmitShow()'>Submit</a>");
 
     menu.append(annotateBtn);
+    menu.append($("<span>&nbsp;</span>"));
+    menu.append($("<span>&nbsp;</span>"));
     menu.append(submitBtn);
 
     $('body').append(menu);

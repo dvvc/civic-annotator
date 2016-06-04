@@ -79,14 +79,30 @@ def crossdomain(origin=None, methods=None, headers=None,
 client = MongoClient()
 app = Flask(__name__)
 
+
+def format_list(document):
+
+
+    return """<tr>
+    <td>%s</td>
+    <td>%s</td>
+    <td>%s</td>
+    <td>%s</td>
+    <td>%s</td>
+</tr>""" % (document['user'],
+            document['element'],
+            document['timestamp'],
+            document['url'],
+            document['comments'])
+
 @app.route("/")
 def index():
     db = client['cnty-annt-db']
     coll = db.annotation.find()
-    lista = "<ul>"
+    lista = "<table>"
     for document in coll:
-	lista += "<li>"+document['name']+"</li>"
-    lista += "</ul>"	
+	lista += format_list(document)
+    lista += "</table>"
     return html + lista + htmlend
 
 @app.route('/hello/',  methods=['POST','OPTIONS'])

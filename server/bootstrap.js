@@ -1,5 +1,13 @@
 (function() {
 
+  //var CANN_SCRIPT = "http://localhost:8000/bookmarklet_style.css";
+  //var CANN_STYLE = "http://localhost:8000/bookmarklet.js";
+
+  var CANN_SCRIPT = "https://dl.dropboxusercontent.com/u/21478613/bookmarklet.js";
+  var CANN_STYLE = "https://dl.dropboxusercontent.com/u/21478613/bookmarklet_style.css";
+
+
+
   // load all dependencies to the web page. After all of them finish loaded,
   // execute our annotation tool
 
@@ -67,8 +75,8 @@
   loadScript("http://ajax.googleapis.com/ajax/libs/jquery/1.7/jquery.min.js", function() {
     loadStylesheet("http://assets.annotateit.org/annotator/v1.2.5/annotator.min.css", function() {
       loadScript("http://assets.annotateit.org/annotator/v1.2.5/annotator-full.min.js", function() {
-        loadStylesheet("bookmarklet_style.css", function() {
-          loadScript("bookmarklet.js", function() {
+        loadStylesheet(CANN_STYLE, function() {
+          loadScript(CANN_SCRIPT, function() {
             // Phew!
           });
         });

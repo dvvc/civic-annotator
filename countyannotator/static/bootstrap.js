@@ -1,12 +1,7 @@
 (function() {
 
-  //var CANN_SCRIPT = "http://localhost:8000/bookmarklet_style.css";
-  //var CANN_STYLE = "http://localhost:8000/bookmarklet.js";
-
-  var CANN_SCRIPT = "https://dl.dropboxusercontent.com/u/21478613/bookmarklet.js";
-  var CANN_STYLE = "https://dl.dropboxusercontent.com/u/21478613/bookmarklet_style.css";
-
-
+  var CANN_STYLE = "http://localhost:5000/static/bookmarklet_style.css";
+  var CANN_SCRIPT = "http://localhost:5000/static/bookmarklet.js";
 
   // load all dependencies to the web page. After all of them finish loaded,
   // execute our annotation tool
@@ -86,32 +81,3 @@
 
 
 })();
-
-/*
-  var%20jqueryScript=document.createElement('script');
-  jqueryScript.type='text/javascript';
-  jqueryScript.src='http://ajax.googleapis.com/ajax/libs/jquery/1.7/jquery.min.js';
-
-
-  var%20jqueryScript=document.createElement('script');
-  jqueryScript.type='text/javascript';
-  jqueryScript.src='http://ajax.googleapis.com/ajax/libs/jquery/1.7/jquery.min.js';
-	var%20annotatorScript=document.createElement('script');
-	annotatorScript.type='text/javascript';
-	annotatorScript.src='bookmarklet.js';
-  var%20countyAnnotatorScript=document.createElement('script');
-  countyAnnotatorScript.type='text/javascript';
-  countyAnnotatorScript.src='http://assets.annotateit.org/annotator/v1.2.5/annotator-full.min.js';
-  var%20annotatorStyle=document.createElement('link');
-  annotatorStyle.rel='stylesheet';
-  annotatorStyle.href='http://assets.annotateit.org/annotator/v1.2.5/annotator.min.css';
-  var%20countyAnnotatorStyle=document.createElement('link');
-  countyAnnotatorStyle.rel='stylesheet';
-  countyAnnotatorStyle.href='bookmarklet_style.css';
-
-	document.getElementsByTagName('head')[0].appendChild(jqueryScript);
-	document.getElementsByTagName('head')[0].appendChild(annotatorScript);
-	document.getElementsByTagName('head')[0].appendChild(annotatorStyle);
-	document.getElementsByTagName('head')[0].appendChild(countyAnnotatorStyle);
-	document.getElementsByTagName('head')[0].appendChild(countyAnnotatorScript);
-*/

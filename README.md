@@ -32,6 +32,8 @@ $ pip -r requirements.txt
 #### Deploy
 *TO-DO*
 
+__Important Considerations:__ In order for the bookmarklet to work, its javascript source must be hosted in a webpage that is accessible from the site we want to annotate. When the bookmarklet is activated, it will try to download the javascript from there (see [bootstrap.js]())
+
 #### Usage
 Run the `start_server.sh` script to start the Flask embedded server, then go to *http://localhost:5000* in a browser and drag and drop the bookmarklet to your browser's Bookmarks Toolbar.
 

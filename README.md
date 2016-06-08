@@ -19,6 +19,11 @@ This project was developed during the National Day of Civic Hacking 2016 by
 * Richard Olivieri
 
 ## How
+#### Project Stucture
+There are two parts in the code: The bookmarklet and the server. The bookmarklet is a small set of javascript to download additional libraries and execute them. It is hosted by the server and its only purpose is to load and inject the [bootstrap.js](https://github.com/dvvc/civic-annotator/blob/master/civicannotator/static/bootstrap.js) script.
+
+The bootstrap script, when executed, will load the rest of dependencies, either scripts or stylesheets. When an annotation is submitted, the javascript code that was loaded by the bookmarklet sends a request to the server, which stores it in a MongoDB database. Then the server can show the list of annotations so far.
+
 #### Dependencies
 The project is developed as a Flask app (tested with Python 2.7). The webapp hosts a bookmarklet and a basic front/back-end. Python requirements are listed in requirements.txt
 

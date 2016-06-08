@@ -1,7 +1,7 @@
 from flask import request
 
-from countyannotator import app, client
-from countyannotator.utils import crossdomain
+from civicannotator import app, client
+from civicannotator.utils import crossdomain
 
 ####
 
@@ -9,12 +9,12 @@ html = """
 <html>
 
   <head>
-    <title>MiamiDade county annotations</title>
+    <title>MiamiDade civic annotations</title>
   </head>
 
   <body>
 
-    <h1>County annotation tool</h1>
+    <h1>Civic annotation tool</h1>
 
     <a href="javascript:(function(){
              var%20bootstrapScript=document.createElement('script');
@@ -24,7 +24,7 @@ html = """
                    document.getElementsByTagName('head')[0].appendChild(bootstrapScript);
 
 })();
-">CountyAnnotatorV2<a>
+">Civic AnnotatorV2<a>
 
     <h1>Live annotations</h1>
 """

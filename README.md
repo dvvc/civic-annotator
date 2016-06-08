@@ -1,7 +1,7 @@
-# County Annotator
+# Civic Annotator
 
 ## What
-A bookmarklet and a web application to help annotate county websites with user feedback. It provides a visual interface for web admins to review and prioritize these comments.
+A bookmarklet and a web application to help annotate county and municipal websites with user feedback. It provides a visual interface for web admins to review and prioritize these comments.
 
 #### Status
 This is a very early prototype. There are many issues that need to be addressed.
@@ -22,7 +22,7 @@ This project was developed during the National Day of Civic Hacking 2016 by
 #### Dependencies
 The project is developed as a Flask app (tested with Python 2.7). The webapp hosts a bookmarklet and a basic front/back-end. Python requirements are listed in requirements.txt
 
-The bookmarklet code is tested in Firefox 46.
+The bookmarklet code is tested with Firefox 46.
 
 #### Install
 ```shell
@@ -32,7 +32,7 @@ $ pip -r requirements.txt
 #### Deploy
 *TO-DO*
 
-__Important Considerations:__ In order for the bookmarklet to work, its javascript source must be hosted in a webpage that is accessible from the site we want to annotate. When the bookmarklet is activated, it will try to download the javascript from there (see [bootstrap.js]())
+__Important Considerations:__ In order for the bookmarklet to work, its javascript source must be hosted in a webpage that is accessible from the site we want to annotate. When the bookmarklet is activated, it will try to download the javascript from there (see [bootstrap.js](https://github.com/dvvc/civic-annotator/blob/master/civicannotator/static/bootstrap.js))
 
 #### Usage
 Run the `run.sh` script to start the Flask embedded server, then go to *http://localhost:5000* in a browser and drag and drop the bookmarklet to your browser's Bookmarks Toolbar.

@@ -1,5 +1,5 @@
 #!/usr/bin/env python
 
-from countyannotator import app
+from civicannotator import app
 
 app.run(debug=True)

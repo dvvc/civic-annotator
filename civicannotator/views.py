@@ -1,3 +1,4 @@
+from datetime import datetime
 from flask import request
 
 from civicannotator import app, client
@@ -37,15 +38,22 @@ htmlend = """
 
 def format_list(document):
 
+    annotation_date = datetime.fromtimestamp(int(document['timestamp']))
+    annotation_date = annotation_date.strftime("%m/%d/%y %H:%M:%S")
+
     return """<tr>
     <td>%s</td>
     <td>%s</td>
     <td>%s</td>
     <td>%s</td>
     <td>%s</td>
+    <td>%s</td>
+    <td>%s</td>
 </tr>""" % (document['user'],
-            document['element'],
-            document['timestamp'],
+            document['element_type'],
+            document['element_id'],
+            document['element_class'],
+            annotation_date,
             document['url'],
             document['comments'])
 

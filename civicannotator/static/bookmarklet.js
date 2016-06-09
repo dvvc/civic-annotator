@@ -11,30 +11,21 @@
 
   var cannSubmit = function() {
 
-    console.log("SUBMIT");
-
-    var elementsStr = "";
+    var element, elementType, elementId, elementClass;
 
     if (selectedElements.length > 0) {
-      var element = selectedElements[0];
-      var elementType  = element.get(0).tagName;
-      var elementId = element.prop('id');
-      var elementClass = element.attr('class');
-
-      console.log(element);
-      console.log(element.get(0).id);
-      console.log(element.id);
-      console.log(element.attr('id'));
-
-      elementStr = "<" + elementType + " id=" + elementId + " class=" + elementClass + " >";
+      element = selectedElements[0];
+      elementType  = element.get(0).tagName;
+      elementId = element.prop('id');
+      elementClass = element.attr('class');
     }
-
-
 
     var annotationData = {
       name: "test",
-      element: elementStr,
-      timestamp: new Date(),
+      element_type: elementType,
+      element_id: elementId,
+      element_class: elementClass,
+      timestamp: parseInt(new Date().getTime() / 1000),
       user: "Anonymous User",
       url: window.location.toString(),
       comments: $("#cann-comments").val(),
@@ -75,12 +66,14 @@
     selectedElements.push(target);
     this.removeEventListener('click', cannAnnotateHandler);
 
+    $('body').removeClass('cann-cursor-selection');
+
   };
 
   var cannAnnotate = function() {
 
     // switch the mouse pointer
-
+    $('body').addClass('cann-cursor-selection');
 
     // register an event listener to send the feedback
     document.addEventListener('click', cannAnnotateHandler);

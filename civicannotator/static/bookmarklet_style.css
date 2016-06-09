@@ -8,6 +8,10 @@
     z-index: 9999;
 }
 
+.cann-cursor-selection {
+    cursor: crosshair;
+}
+
 .cann-separator {
     width: 10px;
 }

@@ -1,7 +1,12 @@
 (function() {
 
-  var CANN_STYLE = "http://localhost:5000/static/bookmarklet_style.css";
-  var CANN_SCRIPT = "http://localhost:5000/static/bookmarklet.js";
+  // Use timestamps to avoid caching. This can be improved to force cache
+  // updates when the files are changed
+
+  var timestamp = new Date().getTime();
+
+  var CANN_STYLE = "http://localhost:5000/static/bookmarklet_style.css" + "?ts=" + timestamp;
+  var CANN_SCRIPT = "http://localhost:5000/static/bookmarklet.js" + "?ts=" + timestamp;
 
   // load all dependencies to the web page. After all of them finish loaded,
   // execute our annotation tool

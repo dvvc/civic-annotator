@@ -18,9 +18,9 @@ html = """
     <h1>Civic annotation tool</h1>
 
     <a href="javascript:(function(){
-             var%20bootstrapScript=document.createElement('script');
+             var%%20bootstrapScript=document.createElement('script');
              bootstrapScript.type='text/javascript';
-             bootstrapScript.src='http://localhost:5000/static/bootstrap.js';
+             bootstrapScript.src='http://localhost:5000/static/bootstrap.js?ts=%s';
 
                    document.getElementsByTagName('head')[0].appendChild(bootstrapScript);
 
@@ -28,7 +28,8 @@ html = """
 ">Civic AnnotatorV2<a>
 
     <h1>Live annotations</h1>
-"""
+""" % (datetime.now().strftime("%s"),)
+
 htmlend = """
   </body>
 

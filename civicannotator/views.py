@@ -18,12 +18,14 @@ html = """
     <h1>Civic annotation tool</h1>
 
     <a href="javascript:(function(){
+             if (!window.cannActivate) {
              var%%20bootstrapScript=document.createElement('script');
              bootstrapScript.type='text/javascript';
              bootstrapScript.src='http://localhost:5000/static/bootstrap.js?ts=%s';
-
-                   document.getElementsByTagName('head')[0].appendChild(bootstrapScript);
-
+             document.getElementsByTagName('head')[0].appendChild(bootstrapScript);
+             } else {
+             cannActivate();
+             }
 })();
 ">Civic AnnotatorV2<a>
 

@@ -1,11 +1,49 @@
 #cann-menu {
-    position: absolute;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: fixed;
     left: 50%;
     top: 0px;
-    width: 600px;
+    width: 400px;
+    height: 70px;
     background-color: white;
-    margin-left: -300px;
+    margin-left: -200px;
     z-index: 9999;
+    border: solid thin #ccc;
+    box-shadow: 5px 5px 2px #ccc;
+
+}
+
+#cann-menu a {
+    outline: 0;
+    flex-grow: 1;
+    width: 100%;
+
+    text-align: center;
+    margin: 5px;
+    padding: 10px;
+}
+
+#cann-annotate-btn {
+    background-image: url("/static/imgs/annotate_button.png");
+    background-size: 80%;
+    width: 100px;
+    height: 100px;
+    background-repeat: no-repeat;
+    background-position: 10px;
+}
+
+#cann-annotate-desc {
+    padding: 8px;
+    margin: 2px;
+    font-family: Helvetica, arial, sans-serif;
+    color: #666;
+    font-size: 0.9em;
+}
+
+#cann-submit-btn {
+
 }
 
 .cann-cursor-selection {
@@ -16,21 +54,29 @@
     width: 10px;
 }
 
-#cann-submit-dialog {
+#cann-submit-pane {
 
+    display: flex;
+    flex-direction: column;
     position: absolute;
     top: 100px;
+    right: 0px;
     width: 400px;
-    left: 50%;
-    margin-left: -200px;
     z-index: 9999;
-    padding: 20px;
     border: solid thin black;
     background-color: white;
-    display: none;
 
 }
 
+#cann-submit-pane div {
+    padding: 10px;
+}
+
+#cann-comments{
+    width: 100%;
+    height: 200px;
+}
+
 .cann-highlight {
-    border: solid red 3px;
+    border: solid #EBEA65 3px;
 }

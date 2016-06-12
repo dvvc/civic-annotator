@@ -1,4 +1,5 @@
 (function() {
+  "use strict";
 
   // Use timestamps to avoid caching. This can be improved to force cache
   // updates when the files are changed
@@ -70,19 +71,29 @@
 	  head.appendChild(link);
   }
 
+  /**
+   * This function should only be called once
+   *
+   */
+  function bootstrap() {
 
-  // If I just knew promises!
-  loadScript("http://ajax.googleapis.com/ajax/libs/jquery/1.7/jquery.min.js", function() {
-    loadStylesheet("http://assets.annotateit.org/annotator/v1.2.5/annotator.min.css", function() {
-      loadScript("http://assets.annotateit.org/annotator/v1.2.5/annotator-full.min.js", function() {
-        loadStylesheet(CANN_STYLE, function() {
-          loadScript(CANN_SCRIPT, function() {
-            // Phew!
+
+    console.log("Bootstrapping");
+
+    // If I just knew promises!
+    loadScript("http://ajax.googleapis.com/ajax/libs/jquery/1.7/jquery.min.js", function() {
+      loadStylesheet("http://assets.annotateit.org/annotator/v1.2.5/annotator.min.css", function() {
+        loadScript("http://assets.annotateit.org/annotator/v1.2.5/annotator-full.min.js", function() {
+          loadStylesheet(CANN_STYLE, function() {
+            loadScript(CANN_SCRIPT, function() {
+              // Phew!
+            });
           });
         });
       });
     });
-  });
+  }
 
+  bootstrap();
 
 })();

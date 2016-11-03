@@ -1,0 +1,7 @@
+{
+  "name": "Civic Annotator",
+  "description": "Annotate public webpages",
+  "repository": "https://github.com/dvvc/civic-annotator",
+  "keywords": ["civic", "annotation", "government"],
+  "image": "heroku/nodejs"
+}
